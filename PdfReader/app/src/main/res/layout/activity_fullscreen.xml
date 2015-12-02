@@ -1,0 +1,224 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#ff6c6d6e"
+             tools:context=".FullscreenActivity"
+             android:id="@+id/MainView">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_control">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/search"
+            android:scaleType="center"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editText_Search"
+            android:hint="File Name"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fullscreen_content"
+        android:background="@color/material_blue_grey_950"
+        android:clickable="true">
+    </FrameLayout>
+</LinearLayout>
+
+
+    <LinearLayout android:id="@+id/fullscreen_content_controls"
+                  style="?metaButtonBarStyle"
+                  android:layout_width="match_parent"
+                  android:layout_height="38dp"
+                  android:translationY="-38dp"
+                  android:layout_gravity="center_horizontal|top"
+                  android:background="@color/button_material_dark"
+                  android:orientation="horizontal"
+                  tools:ignore="UselessParent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_control_panel"
+            android:src="@drawable/control_panel"
+            android:layout_weight="5"
+            android:scaleType="fitCenter"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_edit"
+                android:src="@drawable/edit"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_sort"
+                android:src="@drawable/sort"
+                android:scaleType="fitCenter"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:translationY="-38dp"
+        android:id="@+id/fullscreen_edit_control"
+        android:visibility="visible">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imageButton_select"
+            android:src="@drawable/select"
+            android:scaleType="fitCenter"
+            android:hint="@string/hint_of_select_button"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_rename"
+            android:src="@drawable/rename"
+            android:scaleType="fitCenter"
+            android:hint="@string/hint_of_rename_button"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_move"
+            android:src="@drawable/move"
+            android:scaleType="fitCenter"
+            android:hint="@string/hint_of_move_button"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_delete"
+            android:src="@drawable/delete"
+            android:scaleType="fitCenter"
+            android:hint="@string/hint_of_delete_button"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_addNewFolder"
+            android:layout_weight="1"
+            android:src="@drawable/new_folder"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|right"
+        android:id="@+id/fullscreen_sort_control"
+        android:translationY="-38dp"
+        android:visibility="visible">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_sort_by_name"
+            android:text="@string/button_sort_by_name"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_sort_by_last_viewed"
+            android:text="@string/button_sort_by_last_viewed"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/fullscreen_control_panel"
+        android:translationY="38dp"
+        android:background="@color/button_material_dark">
+
+
+        <fragment
+            class="hhp.pdfreader.ControlPanelListFragment"
+            android:id="@+id/fragment_control_panel_list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginView"
+            android:visibility="invisible">
+            <fragment
+                class="hhp.pdfreader.AccountLoginFragment"
+                android:id="@+id/fragment_account_login_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/rename_view"
+        android:clickable="true"
+        android:background="#8da9a9a9">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@android:color/black">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editText_enterNewFolderName"
+                android:background="@android:color/black"
+                android:textSize="30sp"/>
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_text_enter_new_pdf_name"
+                android:hint="Enter new File Name !"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ok_to_rename_file"
+                    android:id="@+id/button_ok_to_rename_file"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

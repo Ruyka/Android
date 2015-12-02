@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Pdf Reader</string>
+    <string name="hello">hello world</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="button_sort_by_name">Name</string>
+    <string name="button_sort_by_last_viewed">Last Viewed</string>
+    <string name="buton_file">File</string>
+    <string name="button_history">History</string>
+    <string name="button_favourite">New Button</string>
+    <string name="button_setting">Settings</string>
+
+    <string name="title_activity_pdf_viewer">Pdf Viewer</string>
+    <string name="title_activity_show_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="TextViewLogin">Please Login into your Google Drive Account!</string>
+    <string name="TextViewUserName">User Name:</string>
+    <string name="textView_Password">Password</string>
+    <string name="button_Login">Login</string>
+    <string name="hint_of_select_button">Select Pdf</string>
+    <string name="hint_of_rename_button">Rename pdf</string>
+    <string name="hint_of_move_button">Move pdf</string>
+    <string name="hint_of_delete_button">Delete Pdf</string>
+    <string name="ok_to_rename_file">Ok</string>
+    <string name="title_activity_choose_folder">Folder</string>
+    <string name="choose_folder_text_view">Please choose a directory:</string>
+    <string name="editText_enterNewFolderName">Enter new File Name:</string>
+    <string name="phat">1351035 - Ho Huu Phat</string>
+    <string name="thanh">1351039 - Kim Nhat Thanh</string>
+</resources>
