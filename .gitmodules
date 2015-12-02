@@ -1,0 +1,3 @@
+[submodule "PdfReader"]
+	path = PdfReader
+	url = ../../DeKal/Pdf_Reader.git
